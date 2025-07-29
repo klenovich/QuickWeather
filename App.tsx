@@ -15,7 +15,7 @@ function HomeScreen() {
   return (
     <ThemedView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <ThemedText type="title">Welcome to QuickWeather!</ThemedText>
-      <ThemedText type="body">Your weather app is ready.</ThemedText>
+      <ThemedText type="default">Your weather app is ready.</ThemedText>
     </ThemedView>
   );
 }
@@ -25,7 +25,7 @@ function ExploreScreen() {
   return (
     <ThemedView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <ThemedText type="title">Explore</ThemedText>
-      <ThemedText type="body">Discover weather features here.</ThemedText>
+      <ThemedText type="default">Discover weather features here.</ThemedText>
     </ThemedView>
   );
 }
