@@ -1,6 +1,6 @@
 {
   "name": "QuickWeather",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
     "start": "expo start",
     "android": "expo run:android",
@@ -10,12 +10,9 @@
   "dependencies": {
     "@babel/core": "^7.26.0",
     "expo": "^53.0.20",
-    "expo-font": "~12.0.10",
     "expo-status-bar": "~1.12.1",
-    "expo-splash-screen": "~0.27.5",
     "react": "18.2.0",
-    "react-native": "0.79.5",
-    "react-native-reanimated": "~3.10.1"
+    "react-native": "0.79.5"
   },
   "devDependencies": {
     "typescript": "~5.8.3",
