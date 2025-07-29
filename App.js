@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -7,7 +6,6 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to QuickWeather!</Text>
       <Text style={styles.body}>Your weather app is ready.</Text>
-      <StatusBar style="auto" />
     </View>
   );
 }
