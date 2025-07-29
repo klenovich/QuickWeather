@@ -1,4 +1,7 @@
 {
   "name": "QuickWeather",
-  "packageManager": "yarn@3.6.4"
+  "packageManager": "yarn@3.6.4",
+  "dependencies": {
+    "expo": "^53.0.20"
+  }
 }
