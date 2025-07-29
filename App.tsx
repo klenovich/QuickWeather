@@ -1,44 +1,32 @@
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
-
-// Import your existing components
-import { ThemedText } from './components/ThemedText';
-import { ThemedView } from './components/ThemedView';
+import { StyleSheet, Text, View } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
 // Simple Home Screen
 function HomeScreen() {
   return (
-    <ThemedView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <ThemedText type="title">Welcome to QuickWeather!</ThemedText>
-      <ThemedText type="default">Your weather app is ready.</ThemedText>
-    </ThemedView>
+    <View style={styles.container}>
+      <Text style={styles.title}>Welcome to QuickWeather!</Text>
+      <Text style={styles.body}>Your weather app is ready.</Text>
+    </View>
   );
 }
 
 // Simple Explore Screen
 function ExploreScreen() {
   return (
-    <ThemedView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <ThemedText type="title">Explore</ThemedText>
-      <ThemedText type="default">Discover weather features here.</ThemedText>
-    </ThemedView>
+    <View style={styles.container}>
+      <Text style={styles.title}>Explore</Text>
+      <Text style={styles.body}>Discover weather features here.</Text>
+    </View>
   );
 }
 
 export default function App() {
-  const [loaded] = useFonts({
-    SpaceMono: require('./assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  if (!loaded) {
-    return null;
-  }
-
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -66,4 +54,23 @@ export default function App() {
       <StatusBar style="auto" />
     </NavigationContainer>
   );
-} 
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    color: '#000',
+  },
+  body: {
+    fontSize: 16,
+    color: '#666',
+  },
+}); 
